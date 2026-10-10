@@ -1,0 +1,246 @@
+:root {
+    --primary: #1a1a1a;
+    --secondary: #f4f4f4;
+    --accent: #c5a059;
+    --text: #333;
+    --light-grey: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: aquamarine;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    background-image: url(https://www.google.com/imgres?q=logo&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fthumbnails%2F060%2F666%2F598%2Fsmall%2Ffox-creative-brand-logo-idea-vector.jpg&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Fcreative-logo&docid=nrfvpsJuvYMP_M&tbnid=wJ7coEfmOK9idM&vet=12ahUKEwixrZuxoaeXAxWwVmwGHQJRGY0QnPAOegQIOxAA..i&w=438&h=350&hcb=2&ved=2ahUKEwixrZuxoaeXAxWwVmwGHQJRGY0QnPAOegQIOxAA) ;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.cart-btn {
+    background: var(--primary);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 35px;
+    background: azure;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Product Section */
+main {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.underline {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 10px auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0;
+}
+
+/* Product Card */
+.product-card {
+    group: hover;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    background: var(--secondary);
+    height: 320px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.hover-add {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.product-card:hover .img-container img {
+    transform: scale(1.1);
+}
+
+.product-card:hover .hover-add {
+    bottom: 0;
+}
+
+.product-info {
+    padding-top: 15px;
+}
+
+.product-info h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: var(--light-grey);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary);
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 40px;
+}
+
+.footer-about h3 {
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--light-grey);
+    font-size: 0.9rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: var(--light-grey);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
